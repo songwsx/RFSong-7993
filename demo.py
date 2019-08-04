@@ -88,7 +88,7 @@ class ObjectDetector:
                 np.float32, copy=False)
             # keep = nms(c_bboxes,c_scores)
 
-            keep = nms(c_dets, 0.45, force_cpu=args.cpu)
+            keep = nms(c_dets, 0.2, force_cpu=args.cpu)
             c_dets = c_dets[keep, :]
             all_boxes[j] = c_dets
 
