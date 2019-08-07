@@ -1,5 +1,5 @@
 # RFSong-7993
-设计的轻量级RFB进行行人检测，AP达到0.7993，参数量仅有3.1MB
+设计的轻量级RFB进行行人检测，AP达到0.7993，参数量仅有3.1MB，速度在Titan X 测试有200FPS
 
 文章链接：https://zhuanlan.zhihu.com/p/76491446
 
