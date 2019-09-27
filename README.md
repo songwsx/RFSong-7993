@@ -5,9 +5,30 @@
 
 ## 环境
 在python3.6 Ubuntu16.04 pytorch1.1下进行了实验
+
 - 编译NMS
 
  `./make.sh`
+
+# 训练自己的数据集
+
+1. 新建一个文件夹VOCdevkit，将自己的VOC格式数据集的VOC2007文件夹移动到VOCdevkit中，例如我的就是/home/common/wangsong/VOCdevkit/VOC2007
+```Shell
+$VOCdevkit/
+$VOCdevkit/VOC2007/
+$VOCdevkit/VOC2007/Annotations/
+$VOCdevkit/VOC2007/ImageSets/
+$VOCdevkit/VOC2007/JPEGImages/
+```
+
+2. 修改data/config.py中的数据集路径 `VOCroot = '/home/common/wangsong/VOC/VOCdevkit' ` 改为自己数据集对应的路径
+
+3. 修改针对VOC行人的代码部分，可以参考文章查看修改的地方: https://zhuanlan.zhihu.com/p/75086049
+- train_RFB.py的trainsets进行改动：
+`train_sets = [('2007', 'trainval'))]`
+- data/voc0712.py和data/voc_eval.py这两个文件可以直接用钢筋检测里面的替换
+
+4. 运行train_RFB
 
 # 与RFB不同的是
 - 代码更方便进行自己设计网络
