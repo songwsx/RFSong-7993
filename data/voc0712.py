@@ -66,7 +66,7 @@ class AnnotationTransform(object):
             if not self.keep_difficult and difficult:
                 continue
             name = obj.find('name').text.lower().strip()
-            if name != 'person':
+            if name not in VOC_CLASSES:
                 continue
             bbox = obj.find('bndbox')
 
