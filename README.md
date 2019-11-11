@@ -27,7 +27,7 @@ $VOCdevkit/VOC2007/JPEGImages/
   - train_RFB.py的trainsets进行改动：`train_sets = [('2007', 'trainval'))]`
   - data/voc0712.py和data/voc_eval.py这两个文件可以直接用[钢筋检测](https://zhuanlan.zhihu.com/p/75086049 "悬停显示")里面的替换
   
-  **或者在群文件下载RFSong多数据集联合训练文件夹（因为多数据集联合训练就统一用的VOC2007格式**
+  **或者在群文件下载RFSong多数据集联合训练文件夹（因为多数据集联合训练就统一用的VOC2007格式）**
 
 4. 运行train_RFB
 
